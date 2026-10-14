@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block title %}Applications · CareerPilot{% endblock %}
+{% block content %}
+<div class="page-heading"><div><div class="eyebrow">Stay on top of your search</div><h1>Applications.</h1><p class="subheading">Keep a simple record of roles you’ve applied to and how well your skills matched.</p></div><a class="btn btn-primary" href="{{ url_for('dashboard') }}">+ Add an application</a></div>
+<section class="card">{% if applications %}<div class="table-wrap"><table><thead><tr><th>Company</th><th>Role</th><th>Match</th><th>Status</th><th>Date added</th></tr></thead><tbody>{% for item in applications %}<tr><td class="job-title">{{ item[1] }}</td><td>{{ item[2] }}</td><td><span class="badge {% if item[3] >= 70 %}badge-success{% elif item[3] >= 40 %}badge-warning{% else %}badge-danger{% endif %}">{{ item[3] }}%</span></td><td><span class="badge">{{ item[4] }}</span></td><td>{{ item[5] }}</td></tr>{% endfor %}</tbody></table></div>{% else %}<div class="empty-state"><div class="empty-icon">▤</div><h2>Your tracker is ready</h2><p>Save a role from the workspace after checking your match.</p><a class="btn btn-primary" href="{{ url_for('dashboard') }}">Go to workspace</a></div>{% endif %}</section>
+{% endblock %}

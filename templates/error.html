@@ -1,0 +1,5 @@
+{% extends 'base.html' %}
+{% block title %}Something went wrong · CareerPilot{% endblock %}
+{% block content %}
+<section class="card empty-state"><span class="badge badge-danger">Error {{ code }}</span><h1 class="mt-20">We hit a snag.</h1><p>{{ message }}</p><a class="btn btn-primary" href="{{ url_for('dashboard') }}">Back to workspace</a></section>
+{% endblock %}

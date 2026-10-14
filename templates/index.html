@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}CareerPilot · AI Job Agent{% endblock %}
+{% block content %}
+<section class="card hero-card">
+  <div class="eyebrow">A calmer way to find your next role</div><h1 class="hero-title">Turn your experience into your next opportunity.</h1>
+  <p class="subheading">Compare your resume to real job descriptions, get interview-ready, and keep your applications organized in one private workspace.</p>
+  <div class="button-row"><a class="btn btn-primary" href="{{ url_for('dashboard') }}">Open your workspace <span aria-hidden="true">→</span></a><a class="btn btn-outline" href="{{ url_for('jobs') }}">Explore job search</a></div>
+  <div class="metric-grid mt-20"><div class="metric"><div class="metric-value">01</div><div class="metric-label">Upload your resume</div></div><div class="metric"><div class="metric-value">02</div><div class="metric-label">Find your fit</div></div><div class="metric"><div class="metric-value">03</div><div class="metric-label">Prepare with purpose</div></div><div class="metric"><div class="metric-value">04</div><div class="metric-label">Track every application</div></div></div>
+</section>
+{% endblock %}

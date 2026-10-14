@@ -1,0 +1,10 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+instance/
+jobs.db
+uploads/
+generated/
+.pytest_cache/
